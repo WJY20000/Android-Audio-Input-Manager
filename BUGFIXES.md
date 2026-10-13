@@ -3,6 +3,10 @@
 All issues were found through a full source review and fixed in-place.
 No new features beyond making the documented behavior actually work.
 
+## ⚙️ CI follow-up — Android SDK setup runtime
+
+The first GitHub Actions run showed that `android-actions/setup-android@v3` downloaded a newer `sdkmanager` which requires JDK 17, while the workflow had selected JDK 11. Updated the CI runtime to JDK 17. This does **not** change the app's Java compatibility: `sourceCompatibility` and `targetCompatibility` remain Java 11.
+
 ## 🧱 Round 5 — build files, resources & UX-loop audit
 
 | # | Bug | Fix |
