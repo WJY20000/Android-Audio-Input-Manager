@@ -45,7 +45,7 @@ You can build and run this project from the source code.
 1.  **Clone the Repository**
     Open your terminal or command prompt and run:
     ```
-    git clone https://github.com/pvmeht/android-audio-input-manager.git
+    git clone https://github.com/github.com/WJY20000/Android-Audio-Input-Manager.git
     ```
 
 2.  **Open in Android Studio**
@@ -61,11 +61,5 @@ You can build and run this project from the source code.
     *   On first launch, the app will ask for **Audio** and **Nearby Devices (Bluetooth)** permissions. You must grant these for the app to function correctly.
 
 ---
-
-## 📸 Screenshot
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/18e7de7b-c1f0-4c2f-a74d-2363ca456098" width="250"/>
-</p>
 
 
