@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.audioinputmanager'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.audioinputmanager"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        // FIX: aligned with the README's "JDK 11" prerequisite (was 1.8).
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    // FIX: androidx.core declared explicitly — the service now uses
+    // ServiceCompat / ContextCompat directly instead of relying on
+    // a transitive dependency from appcompat.
+    implementation 'androidx.core:core:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // FIX: material was declared TWICE; duplicate removed. constraintlayout
+    // removed as well — no layout in this project actually uses it.
+    implementation 'com.google.android.material:material:1.12.0'
+    // For the Splash Screen API
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}

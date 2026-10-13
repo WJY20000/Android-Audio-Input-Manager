@@ -1,0 +1,12 @@
+<resources>
+    <!-- FIX (round 5, #19): the old night variant still used the project
+         template's Material2 theme WITH an ActionBar, while the day theme was
+         migrated to Material3 NoActionBar — so the app gained a stray
+         ActionBar at night and lost its Material3 styling. Mirror the day
+         definition; DayNight handles the dark colors automatically.
+         Theme.App.Starting intentionally falls back to values/ (white splash
+         + black mic icon stays visible in both modes). -->
+    <style name="Base.Theme.AudioInputManager" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.AudioInputManager" parent="Base.Theme.AudioInputManager" />
+</resources>

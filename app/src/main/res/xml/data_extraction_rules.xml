@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <!-- FIX (round 5, #16): exclude our SharedPreferences. audio_prefs.xml holds
+         a routing preference keyed to a DEVICE-SPECIFIC audio-device ID — copying
+         it to another phone via cloud backup or D2D transfer restores garbage.
+         If <device-transfer> is omitted, the cloud-backup rules apply to D2D too. -->
+    <cloud-backup>
+        <exclude domain="sharedpref" path="audio_prefs.xml" />
+        <exclude domain="sharedpref" path="ui_prefs.xml" />
+    </cloud-backup>
+</data-extraction-rules>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FIX (round 5, #16): same exclusion for the legacy full-backup format used
+     on API 30 and below (data_extraction_rules takes over on API 31+). -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="audio_prefs.xml" />
+    <exclude domain="sharedpref" path="ui_prefs.xml" />
+</full-backup-content>
